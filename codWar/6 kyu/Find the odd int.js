@@ -13,7 +13,7 @@ function findOdd(A) {
   // console.log(A);
   let x = {};
   if (A.length == 1) {
-    return A.toString();
+    return +A.toString();
   } else
     A.forEach((el, index) => {
       if (el in x) {
@@ -22,7 +22,7 @@ function findOdd(A) {
     });
   // console.log(x);
   for (const key in x) {
-    if (x[key] % 2 != 0) return key;
+    if (x[key] % 2 != 0) return +key;
   }
 }
 
