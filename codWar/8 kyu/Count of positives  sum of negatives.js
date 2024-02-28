@@ -1,7 +1,7 @@
 function countPositivesSumNegatives(input) {
   let newArray = [0, 0];
   input.forEach((e) => {
-    if (e >= 0) {
+    if (e > 0) {
       newArray[0] += e;
     } else {
       newArray[1] += e;
