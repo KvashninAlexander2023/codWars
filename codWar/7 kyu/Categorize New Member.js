@@ -8,17 +8,46 @@
 //input =  [[18, 20], [45, 2], [61, 12], [37, 6], [21, 21], [78, 9]]
 //output = ["Open", "Open", "Senior", "Open", "Open", "Senior"]
 
-function openOrSenior(data){
-  // ...
+function openOrSenior(data) {
+  let newArray = [];
+  for (let i = 0; i < data.length; i++) {
+    if (data[i][0] >= 55 && data[i][1] >= 7) {
+      newArray.push("Senior");
+    } else {
+      newArray.push("Open");
+    }
+  }
+  return newArray;
 }
 
+// Best practices on codwars
+// function openOrSenior(data){
+//   return data.map(([age, handicap]) => (age > 54 && handicap > 7) ? 'Senior' : 'Open');
+// }
 
+console.log(
+  openOrSenior([
+    [45, 12],
+    [55, 21],
+    [19, -2],
+    [104, 20],
+  ])
+); //,['Open', 'Senior', 'Open', 'Senior'
 
+console.log(
+  openOrSenior([
+    [3, 12],
+    [55, 1],
+    [91, -2],
+    [53, 23],
+  ])
+); //,['Open', 'Open', 'Open', 'Open'])
 
-
-console.log(openOrSenior([[45, 12],[55,21],[19, -2],[104, 20]]))//,['Open', 
-console.log(openOrSenior([[3, 12],[55,1],[91, -2],[53, 23]]))//,['Open', 'Open', 'Open', 'Open'])
-
-console.log(openOrSenior([[59, 12],[55,-1],[12, -2],[12, 12]]))//,['Senior', 'Open', 'Open', 'Open']
-
-
+console.log(
+  openOrSenior([
+    [59, 12],
+    [55, -1],
+    [12, -2],
+    [12, 12],
+  ])
+); //,['Senior', 'Open', 'Open', 'Open']
