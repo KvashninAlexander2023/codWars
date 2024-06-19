@@ -5,7 +5,6 @@
 
 // arrayDiff([1,2,2,2,3],[2]) == [1,3]
 
-
 function arrayDiff(a, b) {
   newArr = []
   a.forEach(el => {
@@ -19,3 +18,5 @@ console.log(arrayDiff([1,2,2,2,3],[2]));//[1,3]
 // function array_diff(a, b) {
 //   return a.filter(e => !b.includes(e));
 // }
+// const acc = {}
+// console.log(acc["el"]);
